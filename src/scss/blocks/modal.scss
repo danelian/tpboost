@@ -1,73 +1,51 @@
 /*------ modal ------*/
-	.modal {
-		padding: 60px 40px;
-		border-radius: var(--border-radius);
-		background: #f4f4f4;
-		&-heading {
-			margin-bottom: 40px;
-		}
-		&-title {
-			margin-top: 0;
-			margin-bottom: 0;
-			color: #131313;
-			font-size: 30px;
-			font-weight: 400;
-			line-height: 1.2;
-			&:not(:last-child) {
-				margin-bottom: 20px;
-			}
-		}
-		.form {
-			&-bottom {
-				width: 100%;
-				margin-top: 40px;
-				font-size: 17px;
-				font-weight: 400;
-				line-height: 1.2;
-				color: var(--font-color);
-				a {
-					text-decoration: underline;
-					&:hover {
-						text-decoration: none;
-					}
-				}
-			}
-		}
-	}
-
-@include tablet {
-	/*------ modal ------*/
-	.modal {
-		padding: 40px 24px;
-		&-heading {
-			margin-bottom: 30px;
-		}
-		&-title {
-			font-size: 26px;
-		}
-		.form {
-			&-bottom {
-				font-size: 15px;
-			}
-		}
-	}
+.fancybox-slide {
+	padding: 40px !important;
 }
-
-@include mobile {
-/*------ modal ------*/
 .modal {
-	padding: 30px 10px;
+	width: 1000px;
+	max-width: 100%;
+	padding: 26px 40px 40px 40px;
+	background: #fff;
+	&-content {
+		padding-right: 30px;
+		padding-bottom: 0;
+		.scroll-container {
+			height: 650px;
+		}
+	}
+	&-close {
+		position: absolute;
+		top: 0;right: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 30px;
+		min-height: 80px;
+		text-align: center;
+		color: var(--global-color);
+		font-size: 28px;
+		line-height: 1.2;
+		font-weight: 300;
+		letter-spacing: -1.12px;
+		border: 1px solid var(--global-color);
+		outline: none;
+		border-radius: 0;
+		background-color: #fff;
+		transition: all .3s ease;
+		z-index: 500;
+	}
+	&-heading {
+		margin-bottom: 20px;
+	}
 	&-title {
-		font-size: 22px;
-		&:not(:last-child) {
-			margin-bottom: 14px;
-		}
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 1.2;
+		letter-spacing: -1.5px;
+		color: var(--font-color);
 	}
-	.form {
-		&-bottom {
-			margin-top: 30px;
-			font-size: 12px;
-		}
-	}
-}
 }
