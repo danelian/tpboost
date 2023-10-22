@@ -33,3 +33,53 @@
 		cursor: auto;
 	}
 }
+
+.btn-withicon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 20px 30px 20px 110px;
+	min-height: 80px;
+	text-align: center;
+	color: var(--global-color);
+	font-size: 28px;
+	line-height: 1.2;
+	font-weight: 300;
+	letter-spacing: -1.12px;
+	border: 2px solid var(--global-color);
+	outline: none;
+	border-radius: 0;
+	background-color: transparent;
+	transition: all .3s ease;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 80px;
+		height: 100%;
+		border-right: 2px solid var(--global-color);
+		background-color: transparent;
+		transition: all .3s ease;
+	}
+	svg {
+		position: absolute;
+		left: 27px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: all .3s ease;
+	}
+	&:hover {
+		color: var(--white-color);
+		border: 0;
+		background-color: var(--global-color);
+		&::before {
+			background-color: var(--font-color);
+		}
+	}
+	&.disabled {
+		opacity: 0.4;
+		cursor: auto;
+	}
+}

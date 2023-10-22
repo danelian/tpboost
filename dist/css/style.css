@@ -378,6 +378,56 @@ th {
   cursor: auto;
 }
 
+.btn-withicon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 30px 20px 110px;
+  min-height: 80px;
+  text-align: center;
+  color: var(--global-color);
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -1.12px;
+  border: 2px solid var(--global-color);
+  outline: none;
+  border-radius: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn-withicon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  border-right: 2px solid var(--global-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn-withicon svg {
+  position: absolute;
+  left: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.btn-withicon:hover {
+  color: var(--white-color);
+  border: 0;
+  background-color: var(--global-color);
+}
+.btn-withicon:hover::before {
+  background-color: var(--font-color);
+}
+.btn-withicon.disabled {
+  opacity: 0.4;
+  cursor: auto;
+}
+
 /*-----title----*/
 .title-1 {
   margin-top: 0;
@@ -705,6 +755,9 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 20px;
 }
 
+.faq {
+  margin-bottom: 140px;
+}
 .faq .title-1 {
   margin-bottom: 50px;
 }
@@ -735,4 +788,40 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .faq__item:not(:last-child) {
   margin-bottom: 50px;
+}
+
+.contacts .title-1 {
+  margin-bottom: 50px;
+}
+.contacts__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.contacts__container:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: var(--global-color);
+}
+.contacts__left {
+  width: calc(50% - 40px);
+  margin-right: 80px;
+}
+.contacts__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(50% - 40px);
+}
+.contacts__right .btn-withicon {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.contacts__right .btn-withicon:not(:last-child) {
+  margin-right: 16px;
 }
