@@ -756,6 +756,17 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 22px;
   }
 }
+@media screen and (max-width: 576px) {
+  .radio__btns {
+    width: 100%;
+  }
+  .radio__btns .radio:not(:last-child) {
+    margin-right: 6px;
+  }
+  .radio__btns .radio {
+    width: calc(33.33% - 6px);
+  }
+}
 /*------ modal ------*/
 .fancybox-slide {
   padding: 40px !important;
@@ -1131,8 +1142,20 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 20px;
 }
 
-.faq {
-  margin-bottom: 140px;
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+  }
+  .services__item-bnr {
+    margin-bottom: 16px;
+    padding: 30px;
+    min-height: 350px;
+  }
+  .services__item .btn {
+    width: 100%;
+    margin-top: 12px;
+  }
 }
 .faq .title-1 {
   margin-bottom: 50px;
@@ -1166,6 +1189,28 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1024px) {
+  .faq .title-1 {
+    margin-bottom: 30px;
+  }
+  .faq__list {
+    flex-direction: column;
+    width: 100%;
+  }
+  .faq__list:before {
+    display: none;
+  }
+  .faq__list-left {
+    width: 100%;
+    margin-right: 36px;
+  }
+  .faq__list-right {
+    width: 100%;
+  }
+  .faq__item:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}
 .contacts .title-1 {
   margin-bottom: 50px;
 }

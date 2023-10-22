@@ -229,3 +229,15 @@ input[type="number"]::-webkit-inner-spin-button {
 		}
 	}
 }
+
+@include mobile {
+	.radio__btns {
+		width: 100%;
+		.radio:not(:last-child) {
+			margin-right: 6px;
+		}
+		.radio {
+			width: calc(33.33% - 6px);
+		}
+	}
+}

@@ -33,3 +33,23 @@
     }
   }
 }
+
+@include tablet {
+  .services {
+    &__container {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 60px;
+    }
+    &__item {
+      &-bnr {
+        margin-bottom: 16px;
+        padding: 30px;
+        min-height: 350px;
+      }
+      .btn {
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+  }
+}
