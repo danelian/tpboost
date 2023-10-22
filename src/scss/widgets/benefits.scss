@@ -1,0 +1,36 @@
+.benefits {
+  margin-bottom: 140px;
+  .title-1 {
+    max-width: 780px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+    width: 100%;
+  }
+  &__item {
+    width: 100%;
+    &-number {
+      position: relative;
+      margin-bottom: 12px;
+      width: 100%;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: -1.5px;
+      color: var(--global-color);
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: calc(100% - 60px);
+        height: 2px;
+        background-color: var(--global-color);
+      }
+    }
+  }
+}

@@ -17,16 +17,17 @@ body {
 	position: relative;
 }
 section {
-	margin-bottom: 100px;
+	margin-bottom: 120px;
 }
 @include tablet {
 	section {
-		margin-bottom: 70px;
+		margin-bottom: 80px;
 	}
 }
-.row {
-	display: flex;
-	flex-wrap: wrap;
+@include mobile {
+	section {
+		margin-bottom: 60px;
+	}
 }
 .container {
 	margin: 0 auto;
@@ -42,19 +43,19 @@ section {
 	overflow: hidden;
 	height: 100vh;
 }
-::-webkit-scrollbar {
-	width: 0.375rem;
-	background: var(--lightBlack-color);
-}
-::-webkit-scrollbar-thumb {
-	background: #000;
-	width: 0.375rem;
-	height: 12.75rem;
-	border-radius: 0.9375rem;
-}
-::-webkit-scrollbar-thumb:hover {
-	background-color: var(--green-color);
-}
+// ::-webkit-scrollbar {
+// 	width: 0.375rem;
+// 	background: var(--lightBlack-color);
+// }
+// ::-webkit-scrollbar-thumb {
+// 	background: #000;
+// 	width: 0.375rem;
+// 	height: 12.75rem;
+// 	border-radius: 0.9375rem;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+// 	background-color: var(--green-color);
+// }
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
