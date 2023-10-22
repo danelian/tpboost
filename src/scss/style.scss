@@ -18,7 +18,7 @@
 
 /***** Mixins *****/
 @mixin desktop {
-  @media screen and (max-width: 1190px) {
+  @media screen and (max-width: 1599px) {
     @content;
   }
 }
@@ -33,6 +33,11 @@
   }
 }
 
+@media screen and (max-width: 360px) {
+  :root {
+    --container-offset: 16px;
+  }
+}
 
 /***** BLOCKS GLOBAL *****/
 @import "general";

@@ -34,12 +34,8 @@ section {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 }
-.link-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.dis-scroll {
+.dis-scroll,
+body.fancybox-active {
 	overflow: hidden;
 	height: 100vh;
 }

@@ -34,3 +34,25 @@
 		margin-bottom: 20px;
 	}
 }
+
+@include desktop {
+	.title-1 {
+		font-size: 80px;
+		letter-spacing: -4px;
+	}
+	.title-2 {
+		font-size: 32px;
+		letter-spacing: -1px;
+	}
+	.text {
+		font-size: 22px;
+		letter-spacing: -0.9px;
+	}
+}
+
+@include tablet {
+	.title-1 {
+		font-size: 54px;
+		letter-spacing: -3px;
+	}
+}

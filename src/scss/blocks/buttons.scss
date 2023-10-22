@@ -86,3 +86,25 @@
 		cursor: auto;
 	}
 }
+
+@include tablet {
+	.btn {
+		padding: 15px 30px;
+		min-height: 70px;
+		font-size: 22px;
+	}
+	.btn-withicon {
+		padding: 15px 30px 15px 100px;
+		min-height: 70px;
+		font-size: 22px;
+		&::before {
+			top: 0;
+			left: 0;
+			width: 70px;
+			height: 100%;
+		}
+		svg {
+			left: 22px;
+		}
+	}
+}
