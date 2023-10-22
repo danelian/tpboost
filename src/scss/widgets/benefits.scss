@@ -1,12 +1,12 @@
-.benefits {
+.benefits,
+.sets {
   margin-bottom: 140px;
   .title-1 {
     max-width: 780px;
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px 40px;
+    gap: 40px;
     width: 100%;
   }
   &__item {
@@ -33,4 +33,11 @@
       }
     }
   }
+}
+
+.benefits__list {
+  grid-template-columns: repeat(3, 1fr);
+}
+.sets__list {
+  grid-template-columns: repeat(2, 1fr);
 }
