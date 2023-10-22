@@ -1,0 +1,35 @@
+.services {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 40px;
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    &-bnr {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      width: 100%;
+      padding: 40px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 450px;
+      .title-1 {
+        color: #fff;
+        &:nth-child(2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .btn {
+      margin-top: 20px;
+    }
+  }
+}
