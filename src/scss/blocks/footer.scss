@@ -24,3 +24,20 @@
     }
   }
 }
+
+@include tablet {
+  .footer {
+    padding-top: 8px;
+    padding-bottom: 16px;
+    &__container {
+      flex-direction: column;
+      button, a, p {
+        margin: 0;
+        font-size: 22px;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

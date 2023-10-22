@@ -539,6 +539,22 @@ th {
   color: var(--global-color);
 }
 
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__container button, .footer__container a, .footer__container p {
+    margin: 0;
+    font-size: 22px;
+  }
+  .footer__container button:not(:last-child), .footer__container a:not(:last-child), .footer__container p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
 .scroll-container {
   width: 100%;
   height: 400px;
@@ -1202,7 +1218,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .faq__list-left {
     width: 100%;
-    margin-right: 36px;
+    margin-right: 0;
+    margin-bottom: 36px;
   }
   .faq__list-right {
     width: 100%;
@@ -1237,6 +1254,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   width: calc(50% - 40px);
 }
 .contacts__right .btn-withicon {
@@ -1245,4 +1263,33 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .contacts__right .btn-withicon:not(:last-child) {
   margin-right: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  .contacts .title-1 {
+    margin-bottom: 30px;
+  }
+  .contacts__container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .contacts__container:before {
+    display: none;
+  }
+  .contacts__left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .contacts__right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contacts__right .btn-withicon {
+    margin: 0;
+  }
+  .contacts__right .btn-withicon:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
