@@ -25,11 +25,13 @@
 	border-radius: 0;
 	background-color: var(--global-color);
 	transition: all .3s ease;
+	cursor: pointer;
 	&:hover {
 		opacity: 0.85;
 	}
 	&.disabled {
-		opacity: 0.4;
+		color: rgba(36, 37, 44, 0.30);
+		background: rgba(36, 37, 44, 0.05);
 		cursor: auto;
 	}
 }

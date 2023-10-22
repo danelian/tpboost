@@ -369,12 +369,14 @@ th {
   border-radius: 0;
   background-color: var(--global-color);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .btn:hover {
   opacity: 0.85;
 }
 .btn.disabled {
-  opacity: 0.4;
+  color: rgba(36, 37, 44, 0.3);
+  background: rgba(36, 37, 44, 0.05);
   cursor: auto;
 }
 
@@ -540,71 +542,74 @@ th {
 .form {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
 }
 .form-group {
   position: relative;
   width: 100%;
   margin-top: 0;
+  margin-bottom: 30px;
+}
+.form-title {
+  padding-left: 30px;
   margin-bottom: 20px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: -0.88px;
+  color: var(--font-color);
+}
+.form-title sup {
+  top: -0.15em;
+  font-size: 90%;
+  color: var(--global-color);
 }
 .form-label {
   position: relative;
 }
 .form-input {
   width: 100%;
-  height: 50px;
-  padding: 15px 20px;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 20px;
+  height: 80px;
+  padding: 20px 30px;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -1.12px;
   color: var(--font-color);
   box-sizing: border-box;
-  border-radius: 10px;
-  border: 0;
+  border-radius: 0;
+  border: 1px solid var(--font-color);
   outline: none;
   background: #ffffff;
   transition: 0.3s ease;
 }
 .form-input::placeholder {
-  color: #b1b1b1;
+  color: rgba(36, 37, 44, 0.3);
 }
 .form textarea {
   resize: vertical;
   max-width: 100%;
   width: 100%;
-  min-height: 50px;
+  height: 280px;
+  min-height: 80px;
   max-height: 500px;
-  height: 100px;
-  padding: 15px 20px;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 20px;
+  padding: 20px 30px;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -1.12px;
   color: var(--font-color);
   box-sizing: border-box;
-  border-radius: 10px;
-  border: 0;
+  border-radius: 0;
+  border: 1px solid var(--font-color);
   outline: none;
   background: #ffffff;
   transition: 0.3s ease;
 }
 .form textarea::placeholder {
-  color: #b1b1b1;
-}
-.form .accept {
-  margin: 10px 0 !important;
-  width: 100%;
-  font-size: 15px;
-  line-height: 1.15;
-  color: #6f6f6f;
-}
-.form .accept a {
-  text-decoration: none;
-}
-.form .accept a:hover {
-  color: var(--global-color);
-  text-decoration: underline;
+  color: rgba(36, 37, 44, 0.3);
 }
 
 /* Checkbox */
@@ -717,6 +722,46 @@ input[type=number]::-webkit-inner-spin-button {
 .modal-content .scroll-container {
   height: 650px;
 }
+.modal-order .modal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.modal-order .modal-heading .modal-title {
+  width: calc(50% - 20px);
+  margin-right: 40px;
+}
+.modal-order .modal-heading .order-details {
+  width: calc(50% - 20px - 100px);
+}
+.modal-order .form .form-group:nth-child(1) {
+  width: calc(50% - 20px);
+  margin-right: 40px;
+}
+.modal-order .form .form-group:nth-child(2) {
+  width: calc(50% - 20px);
+}
+.modal-order .form .btn {
+  width: 100%;
+  margin-top: 40px;
+}
+.modal-order-yes .modal-heading {
+  margin-bottom: 280px;
+}
+.modal-order-yes .modal-heading .title-1 {
+  margin-bottom: 50px;
+}
+.modal-order-yes .modal-heading .title-2 {
+  max-width: 570px;
+}
+.modal-order-yes .modal-bottom .title-2 {
+  margin: 0;
+}
+.modal-order-yes .modal-bottom .title-2 span {
+  color: var(--global-color);
+}
 .modal-close {
   position: absolute;
   top: 0;
@@ -751,6 +796,50 @@ input[type=number]::-webkit-inner-spin-button {
   line-height: 1.2;
   letter-spacing: -1.5px;
   color: var(--font-color);
+}
+
+.order-details {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.order-details-name {
+  margin: 0 10px 0 0;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: -0.88px;
+  color: var(--font-color);
+}
+.order-details-charact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.order-details-charact span {
+  position: relative;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.88px;
+  color: var(--global-color);
+}
+.order-details-charact span:not(:last-child) {
+  padding-right: 14px;
+  margin-right: 10px;
+}
+.order-details-charact span:not(:last-child):after {
+  content: "";
+  position: absolute;
+  margin-top: -1px;
+  top: 50%;
+  right: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--global-color);
 }
 
 /***** SECTIONS GLOBAL (Widgets) *****/
