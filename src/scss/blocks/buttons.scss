@@ -55,10 +55,10 @@
 	&::before {
 		content: '';
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: -2px;
+		left: -2px;
 		width: 80px;
-		height: 100%;
+		height: calc(100% + 4px);
 		border-right: 2px solid var(--global-color);
 		background-color: transparent;
 		transition: all .3s ease;
@@ -72,9 +72,10 @@
 	}
 	&:hover {
 		color: var(--white-color);
-		border: 0;
+		border-color: transparent;
 		background-color: var(--global-color);
 		&::before {
+			border-color: transparent;
 			background-color: var(--font-color);
 		}
 	}

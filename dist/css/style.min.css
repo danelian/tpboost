@@ -400,10 +400,10 @@ th {
 .btn-withicon::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -2px;
   width: 80px;
-  height: 100%;
+  height: calc(100% + 4px);
   border-right: 2px solid var(--global-color);
   background-color: transparent;
   transition: all 0.3s ease;
@@ -417,10 +417,11 @@ th {
 }
 .btn-withicon:hover {
   color: var(--white-color);
-  border: 0;
+  border-color: transparent;
   background-color: var(--global-color);
 }
 .btn-withicon:hover::before {
+  border-color: transparent;
   background-color: var(--font-color);
 }
 .btn-withicon.disabled {
@@ -468,6 +469,33 @@ th {
 }
 
 /***** COMPONENTS GLOBAL *****/
+/*-----footer-----*/
+.footer {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  width: 100%;
+}
+.footer__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.footer__container button, .footer__container a, .footer__container p {
+  margin: 6px 40px 6px 0;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.2;
+  letter-spacing: -1.12px;
+  color: var(--font-color);
+}
+.footer__container button:hover, .footer__container a:hover {
+  color: var(--global-color);
+}
+
 /*-----form-----*/
 .form {
   display: flex;
