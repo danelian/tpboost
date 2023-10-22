@@ -1028,10 +1028,6 @@ input[type=number]::-webkit-inner-spin-button {
     height: 500px;
   }
 }
-.benefits,
-.sets {
-  margin-bottom: 140px;
-}
 .benefits .title-1,
 .sets .title-1 {
   max-width: 780px;
@@ -1078,6 +1074,29 @@ input[type=number]::-webkit-inner-spin-button {
   grid-template-columns: repeat(2, 1fr);
 }
 
+@media screen and (max-width: 1599px) {
+  .benefits .title-1,
+.sets .title-1 {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .benefits__list,
+.sets__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .benefits__item-number,
+.sets__item-number {
+    margin-bottom: 8px;
+    font-size: 32px;
+    letter-spacing: -1.2px;
+  }
+  .benefits__item-number:before,
+.sets__item-number:before {
+    width: calc(100% - 50px);
+  }
+}
 .services__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
