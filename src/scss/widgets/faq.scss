@@ -1,0 +1,33 @@
+.faq {
+  .title-1 {
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 2px;
+      height: calc(100% + 20px);
+      background: var(--global-color);
+    }
+    &-left {
+      width: calc(50% - 40px);
+      margin-right: 80px;
+    }
+    &-right {
+      width: calc(50% - 40px);
+    }
+  }
+  &__item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}

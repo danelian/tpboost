@@ -704,3 +704,35 @@ input[type=number]::-webkit-inner-spin-button {
 .services__item .btn {
   margin-top: 20px;
 }
+
+.faq .title-1 {
+  margin-bottom: 50px;
+}
+.faq__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.faq__list:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: var(--global-color);
+}
+.faq__list-left {
+  width: calc(50% - 40px);
+  margin-right: 80px;
+}
+.faq__list-right {
+  width: calc(50% - 40px);
+}
+.faq__item {
+  width: 100%;
+}
+.faq__item:not(:last-child) {
+  margin-bottom: 50px;
+}
